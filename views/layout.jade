@@ -1,0 +1,37 @@
+!!!
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/socket.io/socket.io.js")
+    script(src="/javascripts/smoothie.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
+  body
+    section#wrapper!= body
+        canvas#mycanvas
+        script(type='text/javascript')
+          var socket = io.connect();
+          var smoothie = new SmoothieChart({
+              grid: 
+              { 
+                  strokeStyle: 'rgba(0,0,0,0.1)'
+                  , fillStyle: 'white'
+                  , verticalSections: 6
+                  , lineWidth: 1
+                  , millisPerLine: 1000
+              },
+              labels: { fillStyle:'rgb(144,144,144)' }
+            });
+          // Data
+          var line1 = new TimeSeries();
+          smoothie.addTimeSeries(line1,
+            { strokeStyle:'rgb(0, 255, 0)', lineWidth:5 });
+           smoothie.streamTo(document.getElementById("mycanvas"), 1000 /*delay*/);
+          socket.on('count', function (data) {
+            line1.append(new Date().getTime(), data.number);
+                $('span').text(data.number + '!');
+          });
+
+
+          // Add to SmoothieChart
+          smoothie.addTimeSeries(line1);
