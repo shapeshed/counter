@@ -24,9 +24,9 @@ html
             });
           // Data
           var line1 = new TimeSeries();
+           smoothie.streamTo(document.getElementById("mycanvas"), 1000 /*delay*/);
           smoothie.addTimeSeries(line1,
             { strokeStyle:'rgb(0, 255, 0)', lineWidth:5 });
-           smoothie.streamTo(document.getElementById("mycanvas"), 1000 /*delay*/);
           socket.on('count', function (data) {
             line1.append(new Date().getTime(), data.number);
                 $('span').text(data.number + '!');

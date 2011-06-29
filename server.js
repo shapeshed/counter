@@ -36,7 +36,7 @@ io.sockets.on('connection', function (socket) {
 
 	setInterval(function() {
 		io.sockets.emit('count', { number: count });
-	}, 2000);
+	}, 1000);
 
 	socket.on('disconnect', function () {
 		count--
