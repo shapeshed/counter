@@ -4,6 +4,10 @@
 
 An example of a realtime counter with node.js, socket.io and smoothie.js
 
+## Show me!
+
+[http://counter.nodester.com][8]
+
 ## Installation
 
 Assuming you have [node.js][6] and [npm][7] installed you can install with
@@ -20,7 +24,7 @@ Then open `http://0.0.0.0:10709` in your favorite browser.
 
 ## Credits
 
-There are quite a few libraries used in the demo. Thank you!
+There are quite a few tecnologies and libraries used in the demo. Thank you!
 
 * [socket.io][1]
 * [stylus][2]
@@ -37,3 +41,4 @@ There are quite a few libraries used in the demo. Thank you!
 [5]: http://smoothiecharts.org/
 [6]: https://github.com/joyent/node
 [7]: https://github.com/isaacs/npm
+[8]: http://counter.nodester.com
