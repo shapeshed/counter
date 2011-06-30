@@ -8,6 +8,8 @@ An example of a realtime counter with node.js, socket.io and smoothie.js
 
 [http://counter.nodester.com][8]
 
+![](https://img.skitch.com/20110630-g5924q18gbn4j6qta57ki5bmt2.jpg)
+
 ## Installation
 
 Assuming you have [node.js][6] and [npm][7] installed you can install with
