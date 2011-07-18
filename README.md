@@ -22,7 +22,7 @@ Then you can start the server with
 
     node server.js
 
-Then open `http://0.0.0.0:10709` in your favorite browser.
+Then open `http://0.0.0.0:10927` in your favorite browser.
 
 ## Credits
 
