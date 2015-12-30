@@ -14,7 +14,7 @@
     "node": ">= v0.4.0"
   },
   "dependencies": {
-    "express": ">= 2.3.11",
+    "express": "2.5.10",
     "jade": ">= 0.12.3",
     "socket.io": ">= 0.7.2",
     "stylus": ">= 0.13.4"
